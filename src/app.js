@@ -37,7 +37,7 @@ app.get('/help',(req,res) =>{
         title: 'Help',
         tips:'Help Yourself!'
     })
-})
+}) 
 app.get('/weather',(req,res)=>{
     if(!req.query.address){
         return res.send({
