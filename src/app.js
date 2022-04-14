@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 
 const app = express();
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public');;
@@ -69,6 +70,6 @@ res.send('Help article not found.')
 app.get('*',(req,res)=>{
     res.send('My 404 page');
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app.listen(port, () => {
+    console.log('Server is up on port ',port);
 })
